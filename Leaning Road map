@@ -1,0 +1,43 @@
+Learning Road Map (following love babbar's youtube playlist on competitive programming)
+
+*Maths*
+
+1.Birthday Paradox:
+given a probability value p find the number of people needed to be in the room so that atleast 2 of them have same birthday with probability p
+
+// Returns approximate number of people for a given probability 
+int find(double p) 
+{ 
+    return ceil(sqrt(2*365*log(1/(1-p)))); 
+} 
+
+------------------------------------------------------------------
+
+2.Factorial of a large number:
+(code in algorithms)
+
+-------------------------------------------------------------------
+
+3.Modular arithmatics:
+(a*b)%m = ((a%m)*(b%m))%m
+(a + b)%m = ((a%m)+(b%m))%m
+(a - b)%m = ((a%m)-(b%m))%m
+
+for (a/b)%p:
+fermat's little theorem:
+  If p is a prime number. then a^p%p = a%p
+  a^p-2 % p = a^-1 % p
+  a^-1 = a^p-2%p
+
+---------------------------------------------------------------------
+
+4.Fast exponentiation (mode P)
+we need to get x^y%p
+
+while(y>0){
+if(y&1) res = res*x%p;
+y>>1;
+x=x*x%p
+}
+
+-------------------------------------------------------------------
