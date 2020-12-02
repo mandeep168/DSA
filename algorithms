@@ -1,0 +1,37 @@
+//finding factorial of a large number in C++
+
+vector<int> factorial(int n){
+	vector<int> fact;
+	fact.push_back(1);
+	int carry = 0;
+	for(int i = 1;i <= n;i++){
+		for(int p=0;p<fact.size();p++){
+			int val = (fact[p]*i) + carry;
+			carry = val/10;
+			fact[p] = val%10;
+		}while(carry){
+			fact.push_back(carry%10);
+			carry/=10;
+		}
+	}
+
+	reverse(fact.begin(),fact.end());
+	return fact;
+}
+
+************************************************************************************************
+
+Kadanes algorithms (Dynamic Programming)
+
+int finding_maximum_sum_of_contiguous_subarray(int arr[], int n){
+    int msum_till_now = 0;
+    int msum_so_far =0;
+    for(int i=0;i<n;i++){
+        msum_so_far+=arr[i];
+        if(msum_so_far > msum_till_now) msum_till_now = msum_so_far;
+        if(msum_so_far<0) msum_so_far = 0;
+        
+    }return msum_till_now;
+}
+
+**************************************************************************************************
