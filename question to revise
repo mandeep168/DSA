@@ -1,0 +1,14 @@
+Question : You are given a vector of all zeroes of length n, and q quesries of 'l', 'r' are given. in each query you need to increment from l to r by 1.
+
+Approach used is called difference vector . we will create markers at l and r+1
+arr[l]++, arr[r+1]--;
+
+for example: given l, r as 2 4 
+[0, 0, 1, 0, 0, -1, 0]
+and 1,5
+[0, 1, 1, 0 ,0, -1 ,-1]
+for the answer we will take commulative sum
+
+ans - [0,1,2,2,2,1,0]
+
+----------------------------------------------------------------------------------------------
