@@ -1,0 +1,2 @@
+map is implemented using balanced trees.
+unordered maps is implemented using hashing 
