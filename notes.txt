@@ -2,3 +2,4 @@ map is implemented using balanced trees.
 unordered maps is implemented using hashing 
 unordered map is same as hash map in JAVA
 
+as we use pair for pairing similarly tuple can be used for grouping more than 2 elements; tuple<int,int,int>;
